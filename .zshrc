@@ -134,16 +134,20 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# append
-path+=("$HOME/bin/neo4j-desktop")
+# Additions to PATH
+#path+=("$HOME/bin/neo4j-desktop")
+PATH="$HOME/bin/neo4j-desktop:$PATH"
 
-path+=("$HOME/.gem/jruby/2.5.0/bin")
+#path+=("$HOME/.gem/jruby/2.5.0/bin")
+PATH="$HOME/.gem/jruby/2.5.0/bin:$PATH"
 
-path+=('$HOME/.local/bin')
+#path+=('$HOME/.local/bin')
+PATH="$HOME/.local/bin:$PATH"
 
-path+=('$HOME/.pyenv/bin')
-
-path+=('$HOME/.pyenv/shims')
+#path+=('$HOME/.pyenv/bin')
+PATH="$HOME/.pyenv/bin:$PATH"
+#path+=('$HOME/.pyenv/shims')
+PATH="$HOME/.pyenv/shims:$PATH"
 
 # export to sub-processes (make it inherited by child processes)
 export PATH
